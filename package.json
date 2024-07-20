@@ -1,0 +1,29 @@
+{
+  "name": "prit-webrtc-meetings-backend",
+  "version": "1.0.0",
+  "description": "A WebRTC video chat and messaging application",
+  "main": "dist/server.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "ts-node src/server.ts",
+    "nodemon-dev":"nodemon src/server.ts",
+    "build": "tsc",
+    "prestart": "npm run build",
+    "lint": "eslint 'src/**/*.ts'",
+    "format": "prettier --write 'src/**/*.ts'"
+  },
+  "author": "Pritam Majumder",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/ws": "^8.5.11",
+    "typescript": "^5.5.3"
+  }
+}

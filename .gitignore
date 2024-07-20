@@ -1,0 +1,60 @@
+# Node modules
+/node_modules/
+
+# Build output
+/dist/
+/build/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Log files
+*.log
+
+# Environment variables
+.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs_analysis.dat
+*.ncb
+*.suo
+*.suo
+*.user
+*.userosscache
+*.suo
+*.sw?
+*.class
+
+# NPM
+package-lock.json
+yarn.lock
+
+# Coverage reports
+coverage/
+
+# Optional npm cache directory
+.npm/
+
+# Optional yarn cache directory
+.yarn/
+
+# PeerJS server data
+peerjs-server/
+
+# MongoDB local database files
+*.db
+
+# Misc
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.csr
