@@ -1,10 +1,16 @@
 import { WebSocket } from "ws";
-import { handleJoinRoom } from "./handleJoinRoom";
-export function socketEvents(ws: WebSocket, data: any) {
+import { handleAnswer, handleCall, handleJoinRoom } from ".";
+export const socketEvents = (ws: WebSocket, data: any) => {
   try {
     switch (data.type) {
       case "join_room":
         handleJoinRoom(ws, data);
+        break;
+      case "call":
+        handleCall(ws, data);
+        break;
+      case "answer":
+        handleAnswer(ws, data);
         break;
       default:
         console.error("Unknown message type:", data.type);
@@ -12,4 +18,4 @@ export function socketEvents(ws: WebSocket, data: any) {
   } catch (error) {
     console.log(error);
   }
-}
+};

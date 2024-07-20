@@ -1,6 +1,6 @@
-import { roomMap, userSocketMap } from "../controllers/webSocketController";
+import { roomMap } from "../controllers/webSocketController";
 import { WebSocket } from "ws";
-export function handleJoinRoom(ws: WebSocket, data: any) {
+export const handleJoinRoom = (ws: WebSocket, data: any) => {
   try {
     const { roomId } = data;
     const userId = (ws as any).userId;
@@ -65,4 +65,4 @@ export function handleJoinRoom(ws: WebSocket, data: any) {
   } catch (error) {
     console.error("Error handling join_room event:", error);
   }
-}
+};

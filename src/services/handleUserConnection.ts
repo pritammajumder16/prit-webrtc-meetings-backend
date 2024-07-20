@@ -1,8 +1,8 @@
 import http from "http";
 import { WebSocket } from "ws";
 import { userSocketMap } from "../controllers/webSocketController";
-import { socketEvents } from "./socketEvents";
-import { socketOnClose } from "./socketOnClose";
+import { socketEvents, socketOnClose } from ".";
+
 export const handleUserConnection = (
   request: http.IncomingMessage,
   ws: WebSocket
