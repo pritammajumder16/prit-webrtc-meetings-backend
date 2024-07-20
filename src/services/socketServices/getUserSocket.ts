@@ -1,4 +1,4 @@
-import { userSocketMap } from "../controllers/webSocketController";
+import { userSocketMap } from "../../controllers/socketController";
 import { WebSocket } from "ws";
 export const getUserSocket = (userId: string): WebSocket | undefined => {
   try {

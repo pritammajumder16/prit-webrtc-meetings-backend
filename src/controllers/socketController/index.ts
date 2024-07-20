@@ -1,6 +1,6 @@
 import { WebSocketServer, WebSocket } from "ws";
 import http from "http";
-import { handleUserConnection } from "../services";
+import { handleUserConnection } from "../../services";
 
 const wss = new WebSocketServer({ noServer: true });
 export const userSocketMap = new Map<string, WebSocket>(); // Maps userId to WebSocket

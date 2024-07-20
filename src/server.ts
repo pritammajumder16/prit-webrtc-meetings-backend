@@ -3,7 +3,7 @@ import http from "http";
 import { credentials } from "./constants/credentials";
 import corsConfig from "./config/corsConfig";
 import router from "./routes";
-import { wss } from "./controllers/webSocketController";
+import { wss } from "./controllers/socketController";
 import dotenv from "dotenv";
 dotenv.config();
 

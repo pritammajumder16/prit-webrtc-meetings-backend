@@ -1,5 +1,6 @@
-import { roomMap } from "../controllers/webSocketController";
+import { roomMap } from "../../controllers/socketController";
 import { WebSocket } from "ws";
+import { callback } from "./callback";
 export const handleJoinRoom = (ws: WebSocket, data: any) => {
   try {
     const { roomId } = data;
@@ -60,9 +61,18 @@ export const handleJoinRoom = (ws: WebSocket, data: any) => {
         );
       }
     });
-
+    callback({
+      eventType: "joinRoomCallback",
+      data: { success: true, roomId },
+      ws,
+    });
     console.log(`User ${userId} joined room ${roomId}`);
   } catch (error) {
     console.error("Error handling join_room event:", error);
+    callback({
+      eventType: "joinRoomCallback",
+      data: { success: true, message: error },
+      ws,
+    });
   }
 };

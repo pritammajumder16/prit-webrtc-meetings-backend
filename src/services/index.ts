@@ -1,10 +1,10 @@
-import { getUserSocket } from "./getUserSocket";
-import { handleJoinRoom } from "./handleJoinRoom";
-import { socketEvents } from "./socketEvents";
-import { socketOnClose } from "./socketOnClose";
-import { handleUserConnection } from "./handleUserConnection";
-import { handleCall } from "./handleCall";
-import { handleAnswer } from "./handleAnswer";
+import { getUserSocket } from "./socketServices/getUserSocket";
+import { handleJoinRoom } from "./socketServices/handleJoinRoom";
+import { socketEvents } from "./socketServices/socketEvents";
+import { socketOnClose } from "./socketServices/socketOnClose";
+import { handleUserConnection } from "./socketServices/handleUserConnection";
+import { handleCall } from "./socketServices/handleCall";
+import { handleAnswer } from "./socketServices/handleAnswer";
 
 export {
   socketEvents,

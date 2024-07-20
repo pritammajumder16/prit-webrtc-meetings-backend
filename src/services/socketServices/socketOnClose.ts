@@ -1,4 +1,4 @@
-import { roomMap, userSocketMap } from "../controllers/webSocketController";
+import { roomMap, userSocketMap } from "../../controllers/socketController";
 import { WebSocket } from "ws";
 export const socketOnClose = (ws: WebSocket) => {
   try {

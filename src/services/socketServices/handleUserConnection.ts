@@ -1,7 +1,8 @@
 import http from "http";
 import { WebSocket } from "ws";
-import { userSocketMap } from "../controllers/webSocketController";
-import { socketEvents, socketOnClose } from ".";
+import { userSocketMap } from "../../controllers/socketController";
+import { socketEvents, socketOnClose } from "..";
+import { callback } from "./callback";
 
 export const handleUserConnection = (
   request: http.IncomingMessage,
@@ -19,12 +20,11 @@ export const handleUserConnection = (
       userSocketMap.set(userId, ws);
 
       // Notify the user that they are connected
-      ws.send(
-        JSON.stringify({
-          type: "connected",
-          userId: userId,
-        })
-      );
+      callback({
+        eventType: "connectionCallback",
+        data: { success: true, userId: userId },
+        ws,
+      });
 
       console.log(`User ${userId} `);
       ws.on("message", (message: any) => {
@@ -42,5 +42,10 @@ export const handleUserConnection = (
     }
   } catch (error) {
     console.log(error);
+    callback({
+      eventType: "connectionCallback",
+      data: { success: false, message: error },
+      ws,
+    });
   }
 };

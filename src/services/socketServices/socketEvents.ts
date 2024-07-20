@@ -1,5 +1,5 @@
 import { WebSocket } from "ws";
-import { handleAnswer, handleCall, handleJoinRoom } from ".";
+import { handleAnswer, handleCall, handleJoinRoom } from "..";
 export const socketEvents = (ws: WebSocket, data: any) => {
   try {
     switch (data.type) {
