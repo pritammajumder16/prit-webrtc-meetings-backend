@@ -1,8 +1,8 @@
-# WebRTC Video Chat and Messaging Application
+# WebRTC Video Chat and Messaging Application Backend
 
 Welcome to the WebRTC Video Chat and Messaging Application Backend! This real-time communication app lets you engage in high-quality video/audio calls and send text messages using WebRTC, React, Node.js, and TypeScript.
 
-![WebRTC](https://en.wikipedia.org/wiki/WebRTC#/media/File:WebRTC_Logo.svg)
+![WebRTC](https://upload.wikimedia.org/wikipedia/commons/6/68/WebRTC_Logo.svg)
 
 ## 🚀 Features
 
@@ -49,13 +49,13 @@ Check the .env.example file
 For development:
 
 ```bash
-npm run dev;
+npm run dev
 ```
 
 or
 
 ```bash
-npm run nodemon-dev;
+npm run nodemon-dev
 ```
 
 For production (build and start):
@@ -69,12 +69,12 @@ npm start
 
 I welcome contributions! To contribute:
 
-Fork the repository.
-Create a new branch (git checkout -b feature/your-feature).
-Make your changes.
-Commit your changes (git commit -am 'Add new feature').
-Push to the branch (git push origin feature/your-feature).
-Create a new Pull Request.
+- Fork the repository.
+- Create a new branch (git checkout -b feature/your-feature).
+- Make your changes.
+- Commit your changes (git commit -am 'Add new feature').
+- Push to the branch (git push origin feature/your-feature).
+- Create a new Pull Request.
 
 ### 📜 License
 
@@ -84,5 +84,5 @@ This project is licensed under the MIT License.
 
 For any questions or feedback, please reach out to:
 
-Email: pritam.majumder416@gmail.com
-GitHub: pritammajumder16
+- Email: pritam.majumder416@gmail.com
+- GitHub: pritammajumder16
