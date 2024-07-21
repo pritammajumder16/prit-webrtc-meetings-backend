@@ -15,7 +15,6 @@ app.use(router);
 const PORT = credentials.PORT || 8080;
 
 server.on("upgrade", (request, socket, head) => {
-  console.log("Websocket connection request");
   wss.handleUpgrade(request, socket, head, (ws) => {
     wss.emit("connection", ws, request);
   });

@@ -7,7 +7,7 @@ export const handleCall = (ws: WebSocket, data: any) => {
     if (targetSocket) {
       targetSocket.send(
         JSON.stringify({
-          type: "incoming_call",
+          eventType: "incoming_call",
           callerId: data.callerId,
           signalData: data.signalData,
         })

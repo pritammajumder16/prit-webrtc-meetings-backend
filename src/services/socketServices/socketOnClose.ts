@@ -16,7 +16,7 @@ export const socketOnClose = (ws: WebSocket) => {
       sockets.forEach((socket) => {
         socket.send(
           JSON.stringify({
-            type: "user_left",
+            eventType: "user_left",
             userId: userId,
             roomId: roomId,
           })

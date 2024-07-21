@@ -1,13 +1,15 @@
 import { WebSocket } from "ws";
 import { getUserSocket } from "..";
 import { callback } from "./callback";
+import { userSocketMap } from "../../controllers/socketController";
 export const handleAnswer = (ws: WebSocket, data: any) => {
   try {
     const callerSocket = getUserSocket(data.callerId);
+
     if (callerSocket) {
       callerSocket.send(
         JSON.stringify({
-          type: "call_answer",
+          eventType: "call_answer",
           signalData: data.signalData,
         })
       );

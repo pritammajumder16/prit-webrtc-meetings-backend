@@ -3,7 +3,7 @@ import { handleAnswer, handleCall, handleJoinRoom } from "..";
 import { callback } from "./callback";
 export const socketEvents = (ws: WebSocket, data: any) => {
   try {
-    switch (data.type) {
+    switch (data.eventType) {
       case "join_room":
         handleJoinRoom(ws, data);
         break;

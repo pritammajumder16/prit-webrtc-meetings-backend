@@ -29,12 +29,11 @@ export const handleUserConnection = (
 
       console.log(`User ${userId} `);
       ws.on("message", (message: any) => {
-        console.log("socket message");
         const data = JSON.parse(message.toString());
+        console.log("Message arrived: ", data.eventType);
         socketEvents(ws, data);
       });
       ws.on("close", () => {
-        console.log("socket close");
         socketOnClose(ws);
       });
       ws.on("error", (error) => {

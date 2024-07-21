@@ -21,7 +21,7 @@ export const handleJoinRoom = (ws: WebSocket, data: any) => {
       oldRoomSockets.forEach((socket) => {
         socket.send(
           JSON.stringify({
-            type: "user_left",
+            eventType: "user_left",
             userId: userId,
             roomId: oldRoomId,
           })
@@ -44,7 +44,7 @@ export const handleJoinRoom = (ws: WebSocket, data: any) => {
     // Notify the user that they have joined the room
     ws.send(
       JSON.stringify({
-        type: "room_joined",
+        eventType: "room_joined",
         roomId: roomId,
       })
     );
@@ -54,7 +54,7 @@ export const handleJoinRoom = (ws: WebSocket, data: any) => {
       if (socket !== ws) {
         socket.send(
           JSON.stringify({
-            type: "user_joined",
+            eventType: "user_joined",
             userId: userId,
             roomId: roomId,
           })
