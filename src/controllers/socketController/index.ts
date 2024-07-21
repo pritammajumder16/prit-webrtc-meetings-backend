@@ -6,6 +6,7 @@ const wss = new WebSocketServer({ noServer: true });
 export const userSocketMap = new Map<string, WebSocket>(); // Maps userId to WebSocket
 export const roomMap = new Map<string, Set<WebSocket>>(); // Maps roomId to a set of WebSockets
 wss.on("connection", (ws: WebSocket, request: http.IncomingMessage) => {
+  console.log("Websocket express upgraded");
   handleUserConnection(request, ws);
 });
 

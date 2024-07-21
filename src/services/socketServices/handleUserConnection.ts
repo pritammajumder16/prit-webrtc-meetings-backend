@@ -10,6 +10,7 @@ export const handleUserConnection = (
 ) => {
   try {
     const url = new URL(request.url!, `http://${request.headers.host}`);
+
     const userId = url.searchParams.get("userId");
 
     if (userId) {
@@ -28,10 +29,12 @@ export const handleUserConnection = (
 
       console.log(`User ${userId} `);
       ws.on("message", (message: any) => {
+        console.log("socket message");
         const data = JSON.parse(message.toString());
         socketEvents(ws, data);
       });
       ws.on("close", () => {
+        console.log("socket close");
         socketOnClose(ws);
       });
       ws.on("error", (error) => {
