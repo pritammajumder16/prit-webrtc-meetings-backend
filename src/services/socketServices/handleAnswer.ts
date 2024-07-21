@@ -11,6 +11,8 @@ export const handleAnswer = (ws: WebSocket, data: any) => {
         JSON.stringify({
           eventType: "call_answer",
           signalData: data.signalData,
+          callerId: data.myId,
+          callerName: data.myName,
         })
       );
       // Notify the answerer with a success message

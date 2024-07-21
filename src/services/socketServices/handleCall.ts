@@ -10,6 +10,7 @@ export const handleCall = (ws: WebSocket, data: any) => {
           eventType: "incoming_call",
           callerId: data.callerId,
           signalData: data.signalData,
+          callerName: data.callerName,
         })
       );
       callback({
