@@ -1,6 +1,7 @@
 import { WebSocket } from "ws";
 import { handleAnswer, handleCall, handleJoinRoom } from "..";
 import { callback } from "./callback";
+import { handleMessage } from "./handleMessage";
 export const socketEvents = (ws: WebSocket, data: any) => {
   try {
     switch (data.eventType) {
@@ -12,6 +13,9 @@ export const socketEvents = (ws: WebSocket, data: any) => {
         break;
       case "answer_call":
         handleAnswer(ws, data);
+        break;
+      case "send_message":
+        handleMessage(ws, data);
         break;
       default:
         callback({ eventType: "unknownType", data: { success: false }, ws });
