@@ -15,7 +15,7 @@ Welcome to the WebRTC Video Chat and Messaging Application Backend! This real-ti
 
 - **Frontend**: React, TypeScript
 - **Backend**: Node.js, Express, WebSocket
-- **Real-Time Communication**: WebRTC, PeerJS
+- **Real-Time Communication**: WebRTC, simple-peer
 - **Styling**: Tailwind CSS
 - **Environment Management**: dotenv
 

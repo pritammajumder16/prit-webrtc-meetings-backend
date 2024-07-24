@@ -1,5 +1,5 @@
 import { Router, Request, Response, NextFunction } from "express";
-
+import IceServerRoutes from "../controllers/iceServers/index";
 const router = Router();
 router.use((req: Request, res: Response, next: NextFunction) => {
   console.log(
@@ -12,5 +12,6 @@ router.use((req: Request, res: Response, next: NextFunction) => {
 router.get("/", (req: Request, res: Response) => {
   res.send("Server is running");
 });
+router.use("/ice-servers", IceServerRoutes);
 
 export default router;
