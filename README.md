@@ -16,8 +16,7 @@ Welcome to the WebRTC Video Chat and Messaging Application Backend! This real-ti
 - **Frontend**: React, TypeScript
 - **Backend**: Node.js, Express, WebSocket
 - **Real-Time Communication**: WebRTC, PeerJS
-- **Database**: MongoDB
-- **Styling**: Tailwind CSS (if applicable)
+- **Styling**: Tailwind CSS
 - **Environment Management**: dotenv
 
 ## 📋 Installation
@@ -25,7 +24,6 @@ Welcome to the WebRTC Video Chat and Messaging Application Backend! This real-ti
 ### Prerequisites
 
 - Node.js (>=16.0.0)
-- MongoDB
 
 ### Clone the Repository
 
